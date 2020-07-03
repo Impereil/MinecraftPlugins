@@ -1,0 +1,32 @@
+# 
+# Author: Mukund R
+# Version: 1.0.0
+# 
+
+# Setup basic information of the plugin
+name: Enderchest-1.16
+main: com.gmail.mkraman2005.enderchest.enderchest
+version: 1.0.0
+description: A plugin to allow the player to open enderchest via commands. (1.16)
+api-version: 1.16
+author: mkraman2005@gmail.com
+
+# Specifies the load and database attribute
+load: STARTUP
+database: false
+
+# Setup the commands for this plugin
+commands:
+  # Enderchest command to open ender chest
+  enderchest:
+    permissions: enderchest.op
+    aliases: [Enderchest, ender_chest]
+    description: An enderchest directly accessed by commands.
+    usage: "/<command>, Esc to close enderchest."
+    
+# Setup the permissions for this plugin
+permissions:
+  # Enderchest operator -- equivalent of op
+  enderchest.op:
+    description: An enderchest operator can use enderchests directly from command.
+    default: op
